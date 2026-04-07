@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JaiClub Game</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Background */
+body {
+    height: 100vh;
+    background: radial-gradient(circle, #7b2ff7, #1a1a40);
+    color: white;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: rgba(0,0,0,0.3);
+}
+
+/* Toggle (3 lines) */
+.menu {
+    font-size: 26px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+/* Title */
+.title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Center content */
+.container {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+/* Logo Image */
+.logo {
+    width: 260px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+/* Buttons */
+.btn {
+    display: block;
+    width: 85%;
+    max-width: 300px;
+    margin: 15px auto;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Register Button */
+.register {
+    background: linear-gradient(to right, #00c853, #64dd17);
+    color: white;
+}
+
+/* Login Button */
+.login {
+    background: #eee;
+    color: #333;
+}
+
+/* Hover */
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Mobile Optimization */
+@media (max-width: 480px) {
+    .logo {
+        width: 220px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Header -->
+<div class="header">
+    <div class="menu">☰</div>
+    <div class="title">JaiClub Game</div>
+</div>
+
+<!-- Main -->
+<div class="container">
+
+    <!-- Logo Image -->
+    <img src="your-image.png" class="logo" alt="JaiClub">
+
+    <!-- Buttons -->
+    <button class="btn register" onclick="window.location.href='https://jaiclubapp.in.net/'">
+        Register
+    </button>
+
+    <button class="btn login" onclick="window.location.href='https://jaiclubapp.in.net/'">
+        Login
+    </button>
+
+</div>
+
+</body>
+</html>
