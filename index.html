@@ -1,129 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jai Club Login</title>
-<link rel="canonical" href="https://solomanindia.github.io/Jai-Club-Game-/" />
-<meta name="google-site-verification" content="aLP9RYBjXXJ-x_TzJT7RpLGbrSzdsgkDoRJNr1_Al98" />
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hgnice Game - The Ultimate Digital Gaming Playground</title>
+    <style>
+        /* Modern Dark Theme Variables (Updated to Red) */
+        :root {
+            --bg-dark: #0b0c10;
+            --bg-card: #1f2833;
+            --neon-red: #ff3333; /* Vibrant Red */
+            --text-light: #c5c6c7;
+            --white: #ffffff;
+            --gradient: linear-gradient(90deg, #b30000, #ff3333); /* Red Gradient */
+        }
 
-/* Background */
-body {
-    height: 100vh;
-    background: radial-gradient(circle, #7b2ff7, #1a1a40);
-    color: white;
-}
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
 
-/* Header */
-.header {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    background: rgba(0,0,0,0.3);
-}
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.7;
+        }
 
-/* Toggle (3 lines) */
-.menu {
-    font-size: 26px;
-    cursor: pointer;
-    margin-right: 15px;
-}
+        /* Navigation Header */
+        header {
+            background-color: rgba(11, 12, 16, 0.95);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: center; /* Centered the logo */
+            align-items: center;
+            border-bottom: 1px solid #1f2833;
+        }
 
-/* Title */
-.title {
-    font-size: 20px;
-    font-weight: bold;
-}
+        .logo {
+            font-size: 34px;
+            font-weight: 900;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px rgba(255, 51, 51, 0.5); /* Red glow */
+        }
 
-/* Center content */
-.container {
-    text-align: center;
-    margin-top: 40px;
-    padding: 20px;
-}
+        .logo span {
+            color: var(--neon-red);
+        }
 
-/* Logo Image */
-.logo {
-    width: 260px;
-    border-radius: 20px;
-    margin-bottom: 40px;
-}
+        /* Dedicated Button Bar below Header and above Image */
+        .action-bar {
+            background-color: var(--bg-card);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            border-bottom: 2px solid var(--neon-red);
+        }
 
-/* Buttons */
-.btn {
-    display: block;
-    width: 85%;
-    max-width: 300px;
-    margin: 15px auto;
-    padding: 15px;
-    font-size: 18px;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
+        /* Call to Action Buttons */
+        .btn {
+            padding: 12px 35px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+        }
 
-/* Register Button */
-.register {
-    background: linear-gradient(to right, #00c853, #64dd17);
-    color: white;
-}
+        .btn-outline {
+            border: 2px solid var(--neon-red);
+            color: var(--neon-red);
+            background: transparent;
+        }
 
-/* Login Button */
-.login {
-    background: #eee;
-    color: #333;
-}
+        .btn-outline:hover {
+            background: var(--neon-red);
+            color: var(--white);
+            box-shadow: 0 0 15px var(--neon-red);
+        }
 
-/* Hover */
-.btn:hover {
-    transform: scale(1.05);
-}
+        .btn-solid {
+            background: var(--gradient);
+            color: var(--white);
+            border: none;
+        }
 
-/* Mobile Optimization */
-@media (max-width: 480px) {
-    .logo {
-        width: 220px;
-    }
-}
-</style>
+        .btn-solid:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 51, 51, 0.6); /* Red shadow */
+        }
 
+        /* Hero Image Section */
+        .hero-container {
+            width: 100%;
+            background-color: #000;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-height: 600px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Content Container */
+        .main-content {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        /* Grid Layout for Sections */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-top: 4px solid var(--neon-red);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: var(--white);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: 30px;
+            background: var(--gradient);
+            border-radius: 5px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: var(--neon-red);
+            font-weight: bold;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        ul li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "►";
+            position: absolute;
+            left: 0;
+            color: var(--neon-red);
+            font-size: 0.9rem;
+            top: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050608;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 1px solid #1f2833;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            color: #888;
+            margin: 0;
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- Header -->
-<div class="header">
-    <div class="menu">☰</div>
-    <div class="title">JaiClub Game</div>
-</div>
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">HG<span>NICE</span></div>
+    </header>
 
-<!-- Main -->
-<div class="container">
+    <!-- Buttons Moved Under Navigation Bar -->
+    <div class="action-bar">
+        <a href="#login" class="btn btn-outline">Sign In</a>
+        <a href="#register" class="btn btn-solid">Join Now</a>
+    </div>
 
-    <!-- Logo Image -->
-    <img src="jai-club.png" class="logo" alt="JaiClub">
-    <div class="title">Jai Club Game</div>
-</div>
-    
-    <!-- Buttons -->
-    <button class="btn register" onclick="window.location.href='https://www.jaiclub.app/#/register?invitationCode=481361180875">
-        Register
-    </button>
+    <!-- Hero Banner with Exact Image Requested -->
+    <div class="hero-container">
+        <img src="hgnice game.jpg" alt="hgnice game" class="hero-img">
+    </div>
 
-    <button class="btn login" onclick="window.location.href='https://www.jaiclub.app/#/register?invitationCode=481361180875">
-        Login
-    </button>
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <div class="content-grid">
 
-</div>
+            <!-- Section 1: Introduction -->
+            <div class="card">
+                <h2>Welcome to Hgnice Game</h2>
+                <p>Prepare to enter a world where cutting-edge technology meets unparalleled entertainment. The <span class="highlight">hgnice game</span> platform is engineered for players who demand the best. Unlike traditional platforms, we focus on delivering high-definition graphics, zero-latency servers, and a massive library of interactive experiences that cater to every type of gamer.</p>
+                <p>Whether your passion lies in high-stakes tactical challenges, arcade-style quick bursts of fun, or immersive live-action tournaments, the <span class="highlight">hgnice game</span> ecosystem provides a seamless environment. We boast an advanced RNG (Random Number Generator) system to ensure absolute fairness across all modules, making us a top-tier destination for competitive digital sports and leisure.</p>
+            </div>
+
+            <!-- Section 2: Registration -->
+            <div class="card" id="register">
+                <h2>Start Your Journey: Registration</h2>
+                <p>We know you want to jump into the action as quickly as possible. That is why the <span class="highlight">hgince game register</span> system has been optimized to take less than 60 seconds. Say goodbye to long, tedious forms and hello to instant access.</p>
+                <ul>
+                    <li><strong>Step 1:</strong> Click the "Join Now" button at the top of the screen.</li>
+                    <li><strong>Step 2:</strong> Enter your basic credentials on the secure <span class="highlight">hgince game register</span> portal. Your data is protected by military-grade 256-bit encryption.</li>
+                    <li><strong>Step 3:</strong> Verify your account via a quick SMS or email code to unlock your welcome package and daily rewards.</li>
+                </ul>
+            </div>
+
+            <!-- Section 3: Login & Dashboard -->
+            <div class="card" id="login">
+                <h2>Instant Access via Hgnice Login</h2>
+                <p>For returning champions, getting back into your personalized dashboard is completely frictionless. The <span class="highlight">hgnice login</span> gateway is designed to remember your preferences, saving your favorite games and recent achievements directly to your profile.</p>
+                <p>Simply enter your credentials into the <span class="highlight">hgnice login</span> panel, and you will instantly see your updated wallet balance, current leaderboard rankings, and customized game recommendations based on your past gameplay. Forgot your password? Our automated recovery system ensures you are never locked out of your account for long.</p>
+            </div>
+
+            <!-- Section 4: The Mobile App -->
+            <div class="card">
+                <h2>Play Anywhere with the Hgnice App</h2>
+                <p>Why restrict your gameplay to a desktop monitor? The official <span class="highlight">hgnice app</span> brings the entire gaming universe directly into the palm of your hand. Perfectly optimized for both Android and iOS devices, the application ensures that you never miss a critical tournament or a daily bonus.</p>
+                <ul>
+                    <li><strong>Battery Optimized:</strong> The <span class="highlight">hgnice app</span> is coded to run smoothly without draining your smartphone battery, allowing for hours of uninterrupted play.</li>
+                    <li><strong>Push Notifications:</strong> Stay ahead of the competition with real-time alerts about flash tournaments, exclusive promo codes, and special weekend events.</li>
+                    <li><strong>Full Functionality:</strong> Everything you can do on the desktop version—from deposits and withdrawals to live customer support—can be executed flawlessly within the app interface.</li>
+                </ul>
+            </div>
+
+            <!-- Section 5: FAQ -->
+            <div class="card">
+                <h2>Frequently Asked Questions</h2>
+                <p><strong style="color: var(--white);">Q: Is the platform free to join?</strong><br>
+                A: Yes, creating an account is completely free. You can browse the interface, test out demo modes, and explore the community before deciding to play competitively.</p>
+                
+                <p><strong style="color: var(--white);">Q: How fast are payouts processed?</strong><br>
+                A: Our automated finance engine processes most withdrawal requests instantly, ensuring your winnings hit your connected accounts in record time.</p>
+
+                <p><strong style="color: var(--white);">Q: Where can I download the mobile application?</strong><br>
+                A: Once you complete your registration, a secure download link for the mobile application will be available directly on your main dashboard.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Hgnice Digital Entertainment. All Rights Reserved. Engage responsibly.</p>
+    </footer>
 
 </body>
 </html>
