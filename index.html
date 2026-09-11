@@ -3,285 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hgnice Game - The Ultimate Digital Gaming Playground</title>
+    <meta name="description" content="Learn all about Jai Club game, how to register, deposit, play securely, and earn rewards on the most trusted gaming platform of 2026.">
+    <title>Jai Club Game - Play & Earn Securely</title>
     <style>
-        /* Modern Dark Theme Variables (Updated to Red) */
-        :root {
-            --bg-dark: #0b0c10;
-            --bg-card: #1f2833;
-            --neon-red: #ff3333; /* Vibrant Red */
-            --text-light: #c5c6c7;
-            --white: #ffffff;
-            --gradient: linear-gradient(90deg, #b30000, #ff3333); /* Red Gradient */
-        }
-
-        /* General Reset */
+        /* General Reset & Typography */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            scroll-behavior: smooth;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-light);
+            background-color: #f5f6f8;
+            color: #333333;
             line-height: 1.7;
         }
 
-        /* Navigation Header */
+        /* Clean White Container matching the image */
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border-radius: 8px;
+        }
+
+        /* Header Navigation */
         header {
-            background-color: rgba(11, 12, 16, 0.95);
-            padding: 20px 5%;
             display: flex;
-            justify-content: center; /* Centered the logo */
+            justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #1f2833;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eeeeee;
+            margin-bottom: 30px;
         }
 
         .logo {
-            font-size: 34px;
+            font-size: 28px;
             font-weight: 900;
-            color: var(--white);
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 0 0 10px rgba(255, 51, 51, 0.5); /* Red glow */
+            background: -webkit-linear-gradient(left, #0056b3, #b070ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .logo span {
-            color: var(--neon-red);
-        }
-
-        /* Dedicated Button Bar below Header and above Image */
-        .action-bar {
-            background-color: var(--bg-card);
-            padding: 20px;
+        nav ul {
+            list-style: none;
             display: flex;
-            justify-content: center;
             gap: 20px;
-            border-bottom: 2px solid var(--neon-red);
         }
 
-        /* Call to Action Buttons */
-        .btn {
-            padding: 12px 35px;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 30px;
+        nav ul li a {
             text-decoration: none;
-            transition: all 0.3s ease-in-out;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-align: center;
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
         }
 
-        .btn-outline {
-            border: 2px solid var(--neon-red);
-            color: var(--neon-red);
-            background: transparent;
+        nav ul li a.active {
+            color: #007bff;
         }
 
-        .btn-outline:hover {
-            background: var(--neon-red);
-            color: var(--white);
-            box-shadow: 0 0 15px var(--neon-red);
-        }
-
-        .btn-solid {
-            background: var(--gradient);
-            color: var(--white);
-            border: none;
-        }
-
-        .btn-solid:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(255, 51, 51, 0.6); /* Red shadow */
-        }
-
-        /* Hero Image Section */
-        .hero-container {
-            width: 100%;
-            background-color: #000;
-        }
-
-        .hero-img {
-            width: 100%;
-            max-height: 600px;
-            object-fit: cover;
+        /* Buttons matching the image gradient */
+        .btn-gradient {
             display: block;
+            width: 100%;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(to right, #ff8a9d, #aa8cff, #62cdff);
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+        
+        .btn-gradient:hover {
+            opacity: 0.9;
         }
 
-        /* Content Container */
-        .main-content {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 20px;
+        .btn-register {
+            max-width: 250px;
+            border-radius: 30px; /* More rounded as seen in image */
         }
 
-        /* Grid Layout for Sections */
-        .content-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
-        }
-
-        .card {
-            background-color: var(--bg-card);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border-top: 4px solid var(--neon-red);
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
+        /* Typography */
+        h1 {
+            font-size: 32px;
+            font-weight: normal;
+            margin-bottom: 15px;
         }
 
         h2 {
-            color: var(--white);
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        h2::before {
-            content: "";
-            display: inline-block;
-            width: 10px;
-            height: 30px;
-            background: var(--gradient);
-            border-radius: 5px;
+            font-size: 24px;
+            color: #222;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            border-left: 4px solid #aa8cff;
+            padding-left: 10px;
         }
 
         p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-        }
-
-        .highlight {
-            color: var(--neon-red);
-            font-weight: bold;
-        }
-
-        ul {
-            list-style: none;
-            margin-bottom: 20px;
-        }
-
-        ul li {
-            font-size: 1.1rem;
             margin-bottom: 15px;
-            padding-left: 30px;
-            position: relative;
+            font-size: 16px;
         }
 
-        ul li::before {
-            content: "►";
-            position: absolute;
-            left: 0;
-            color: var(--neon-red);
-            font-size: 0.9rem;
-            top: 4px;
+        /* Lists for Step-by-Step guides */
+        ol, ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
         }
 
-        /* Footer */
-        footer {
-            background-color: #050608;
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 60px;
-            border-top: 1px solid #1f2833;
+        li {
+            margin-bottom: 8px;
         }
 
-        footer p {
-            font-size: 0.9rem;
-            color: #888;
-            margin: 0;
+        /* Image Placeholder */
+        .logo-center {
+            display: block;
+            margin: 30px auto;
+            max-width: 200px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <header>
-        <div class="logo">HG<span>NICE</span></div>
-    </header>
-
-    <!-- Buttons Moved Under Navigation Bar -->
-    <div class="action-bar">
-        <a href="#login" class="btn btn-outline">Sign In</a>
-        <a href="#register" class="btn btn-solid">Join Now</a>
-    </div>
-
-    <!-- Hero Banner with Exact Image Requested -->
-    <div class="hero-container">
-        <img src="hgnice game.jpg" alt="hgnice game" class="hero-img">
-    </div>
-
-    <!-- Main Content Area -->
-    <div class="main-content">
-        <div class="content-grid">
-
-            <!-- Section 1: Introduction -->
-            <div class="card">
-                <h2>Welcome to Hgnice Game</h2>
-                <p>Prepare to enter a world where cutting-edge technology meets unparalleled entertainment. The <span class="highlight">hgnice game</span> platform is engineered for players who demand the best. Unlike traditional platforms, we focus on delivering high-definition graphics, zero-latency servers, and a massive library of interactive experiences that cater to every type of gamer.</p>
-                <p>Whether your passion lies in high-stakes tactical challenges, arcade-style quick bursts of fun, or immersive live-action tournaments, the <span class="highlight">hgnice game</span> ecosystem provides a seamless environment. We boast an advanced RNG (Random Number Generator) system to ensure absolute fairness across all modules, making us a top-tier destination for competitive digital sports and leisure.</p>
-            </div>
-
-            <!-- Section 2: Registration -->
-            <div class="card" id="register">
-                <h2>Start Your Journey: Registration</h2>
-                <p>We know you want to jump into the action as quickly as possible. That is why the <span class="highlight">hgince game register</span> system has been optimized to take less than 60 seconds. Say goodbye to long, tedious forms and hello to instant access.</p>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <div class="logo">JAI CLUB</div>
+            <nav>
                 <ul>
-                    <li><strong>Step 1:</strong> Click the "Join Now" button at the top of the screen.</li>
-                    <li><strong>Step 2:</strong> Enter your basic credentials on the secure <span class="highlight">hgince game register</span> portal. Your data is protected by military-grade 256-bit encryption.</li>
-                    <li><strong>Step 3:</strong> Verify your account via a quick SMS or email code to unlock your welcome package and daily rewards.</li>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Responsible Gaming</a></li>
+                    <li><a href="#">Blogs</a></li>
                 </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Jai Club Game</h1>
+            <p><strong>Jai Club</strong> is a secure online gaming platform where users play popular games such as Wingo, K3, 5D, and Aviator. You earn exciting real rewards through skill-based gameplay. Users test their luck and skills through easy-to-play games and withdraw real cash prizes directly to their digital wallets.</p>
+
+            <a href="#" class="btn-gradient">Jai Club App</a>
+
+            <!-- Central Logo area as seen in the image reference -->
+            <div style="text-align: center; padding: 20px 0;">
+                <h2 style="border:none; text-align:center; font-size: 40px; margin:0; background: -webkit-linear-gradient(left, #0056b3, #b070ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">JAI CLUB</h2>
             </div>
 
-            <!-- Section 3: Login & Dashboard -->
-            <div class="card" id="login">
-                <h2>Instant Access via Hgnice Login</h2>
-                <p>For returning champions, getting back into your personalized dashboard is completely frictionless. The <span class="highlight">hgnice login</span> gateway is designed to remember your preferences, saving your favorite games and recent achievements directly to your profile.</p>
-                <p>Simply enter your credentials into the <span class="highlight">hgnice login</span> panel, and you will instantly see your updated wallet balance, current leaderboard rankings, and customized game recommendations based on your past gameplay. Forgot your password? Our automated recovery system ensures you are never locked out of your account for long.</p>
-            </div>
+            <a href="#" class="btn-gradient btn-register">Register Download</a>
 
-            <!-- Section 4: The Mobile App -->
-            <div class="card">
-                <h2>Play Anywhere with the Hgnice App</h2>
-                <p>Why restrict your gameplay to a desktop monitor? The official <span class="highlight">hgnice app</span> brings the entire gaming universe directly into the palm of your hand. Perfectly optimized for both Android and iOS devices, the application ensures that you never miss a critical tournament or a daily bonus.</p>
+            <section>
+                <h2>What is jaiclub game</h2>
+                <p>Jai Club game is a premier digital betting and prediction platform. We provide users with a seamless interface to play engaging mini-games. You apply your analytical skills to predict game outcomes and win real money rewards instantly.</p>
+            </section>
+
+            <section>
+                <h2>Why jaiclub trending in this year 2026</h2>
+                <p>Jai Club is trending in 2026 because we offer lightning-fast instant withdrawals and the highest win rates in the industry. Gamers prefer our platform due to our transparent algorithms, modern user interface, and highly active community of players.</p>
+            </section>
+
+            <section>
+                <h2>How to register on jaiclub</h2>
+                <p>Follow these simple steps to create your secure gaming account:</p>
+                <ol>
+                    <li>Open the official Jai Club website or download our mobile app.</li>
+                    <li>Click the <strong>"Register Download"</strong> button on the homepage.</li>
+                    <li>Enter your active mobile number.</li>
+                    <li>Create a strong, secure password for your account.</li>
+                    <li>Enter the verification OTP sent to your phone.</li>
+                    <li>Click submit to complete registration and start playing.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>How to deposit on jaiclub game</h2>
+                <p>Funding your digital wallet is quick and simple. Use these steps to deposit money safely:</p>
+                <ol>
+                    <li>Log into your Jai Club account.</li>
+                    <li>Navigate to the "Wallet" or "Recharge" section in the main menu.</li>
+                    <li>Select your preferred secure payment method (UPI, Bank Transfer, or Crypto).</li>
+                    <li>Enter the exact amount you wish to deposit.</li>
+                    <li>Follow the on-screen payment gateway instructions to authorize the transaction.</li>
+                    <li>Check your account balance; the funds reflect instantly.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>How to play and types of games</h2>
+                <p>We host a variety of exciting skill-based games. The main types of games include color prediction (Wingo), number prediction (K3, 5D), and crash games (Aviator). To play:</p>
+                <ol>
+                    <li>Select a game from the main dashboard.</li>
+                    <li>Review the previous game trends and charts.</li>
+                    <li>Choose your predicted color, number, or cash-out multiplier.</li>
+                    <li>Place your wager before the countdown timer ends.</li>
+                    <li>Wait for the live result to claim your winnings.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>How to earn form jaiclub game platform</h2>
+                <p>You earn from the Jai Club platform by utilizing successful gaming strategies. You participate in regular gaming rounds and make accurate predictions to multiply your wagered amount. We instantly credit your winning rewards directly to your withdrawable wallet balance.</p>
+            </section>
+
+            <section>
+                <h2>Earn More with Bonus & Referrals in jaiclub game</h2>
+                <p>Maximize your income by using our generous reward programs:</p>
                 <ul>
-                    <li><strong>Battery Optimized:</strong> The <span class="highlight">hgnice app</span> is coded to run smoothly without draining your smartphone battery, allowing for hours of uninterrupted play.</li>
-                    <li><strong>Push Notifications:</strong> Stay ahead of the competition with real-time alerts about flash tournaments, exclusive promo codes, and special weekend events.</li>
-                    <li><strong>Full Functionality:</strong> Everything you can do on the desktop version—from deposits and withdrawals to live customer support—can be executed flawlessly within the app interface.</li>
+                    <li><strong>Daily Login Bonus:</strong> Open the app daily to claim free recharge bonuses.</li>
+                    <li><strong>Referral Program:</strong> Copy your unique invite link from the "Promote" section.</li>
+                    <li><strong>Team Commission:</strong> Share the link with friends. You earn a fixed percentage commission every time your referred friends play and win.</li>
                 </ul>
-            </div>
+            </section>
 
-            <!-- Section 5: FAQ -->
-            <div class="card">
-                <h2>Frequently Asked Questions</h2>
-                <p><strong style="color: var(--white);">Q: Is the platform free to join?</strong><br>
-                A: Yes, creating an account is completely free. You can browse the interface, test out demo modes, and explore the community before deciding to play competitively.</p>
-                
-                <p><strong style="color: var(--white);">Q: How fast are payouts processed?</strong><br>
-                A: Our automated finance engine processes most withdrawal requests instantly, ensuring your winnings hit your connected accounts in record time.</p>
+            <section>
+                <h2>jaiclub Safe, Fair & Trusted Gaming</h2>
+                <p>We prioritize your security above everything. Jai Club utilizes high-end encryption to protect your personal data and financial transactions. Our game developers use certified Random Number Generators (RNG) to ensure every game result remains 100% fair, unbiased, and transparent.</p>
+            </section>
 
-                <p><strong style="color: var(--white);">Q: Where can I download the mobile application?</strong><br>
-                A: Once you complete your registration, a secure download link for the mobile application will be available directly on your main dashboard.</p>
-            </div>
+            <section>
+                <h2>How to Avoid Fraud in jaiclub game</h2>
+                <p>Keep your account safe by following these official security guidelines:</p>
+                <ol>
+                    <li>Never share your account password or OTP with anyone, including people claiming to be customer support.</li>
+                    <li>Always access the platform through our official website link or verified app.</li>
+                    <li>Do not send money directly to unknown UPI IDs found on social media platforms like Telegram or WhatsApp.</li>
+                    <li>Always use the in-app deposit system to recharge your wallet.</li>
+                </ol>
+            </section>
 
-        </div>
+            <section>
+                <h2>Why we choose jaiclub game plaform 2026</h2>
+                <p>We choose the Jai Club game platform in 2026 because it successfully combines entertainment with legitimate earning potential. It provides 24/7 responsive customer support, an incredibly user-friendly design, and a proven track record of reliable payouts, making it the top choice for modern gamers.</p>
+            </section>
+        </main>
     </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Hgnice Digital Entertainment. All Rights Reserved. Engage responsibly.</p>
-    </footer>
 
 </body>
 </html>
